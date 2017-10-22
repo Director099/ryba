@@ -1,0 +1,29 @@
+.logo {
+  position: relative;
+  font-size: @font-size--logo;
+  color: @white;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: @white;
+    transition: @transition-time;
+  }
+
+  &:hover {
+    color: @white;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.list-navigation {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-transform: uppercase;
+
+  &__item {
+
+    a {
+      position: relative;
+      color: @white;
+      padding: 10px 15px;
+      border-radius: @border-radius;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background: @white;
+        transition: @transition-time;
+      }
+
+      &:hover::after {
+        content: '';
+        position: absolute;
+        left: 15px;
+        width: calc(~"100% - 30px");
+      }
+    }
+  }
+
+  &__phone {
+    background: @color-main;
+  }
+}

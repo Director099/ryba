@@ -1,0 +1,56 @@
+body {
+  font: @font-size "Open Sans", "Arial", sans-serif;
+  color: @gray-darkest;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-size: @font-size--h2;
+  font-weight: 700;
+  color: @color-main;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 1px;
+    background: @gray-lighten;
+  }
+
+  &--center {
+    text-align: center;
+
+    &::after {
+      left: 50%;
+      margin-left: -40px;
+    }
+  }
+
+  &--right {
+    text-align: left;
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &--size {
+    font-size: @font-size--h3;
+  }
+}
+
+.title-text {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
