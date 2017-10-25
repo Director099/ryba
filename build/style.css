@@ -513,7 +513,9 @@ pre code {
 }
 .container,
 .page-header__container,
-.range__container {
+.range__container,
+.top-footer__container,
+.footer-bottom__container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -527,7 +529,8 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-.row {
+.row,
+.top-footer__row {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -613,7 +616,8 @@ pre code {
 .col-xl-11,
 .col-xl-12,
 .col-xl,
-.col-xl-auto {
+.col-xl-auto,
+.footer-navigation {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -7385,6 +7389,17 @@ a:hover {
   max-width: 650px;
   margin: 0 auto 40px;
 }
+.btn {
+  background: #00a1eb;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #ffffff;
+  color: #00a1eb;
+}
 .page-header {
   position: relative;
   background: url("img/main-background.jpg") no-repeat center;
@@ -7496,10 +7511,123 @@ a:hover {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.partnership .col-md-4:hover .partnership__img {
+  background: #ffffff;
+}
+.partnership .col-md-4:hover .partnership__icon {
+  fill: #00a1eb;
+}
+.partnership__img {
+  display: -ms-flexbox;
+  display: flex;
+  width: 168px;
+  height: 168px;
+  background: #00a1eb;
+  border-radius: 50%;
+  border: 2px solid #00a1eb;
+  margin: 0 auto 20px;
+  transition: 0.3s;
+}
+.partnership__icon {
+  transition: 0.3s;
+  margin: auto;
+  fill: #ffffff;
+}
+.item {
+  position: relative;
+}
+.product {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.product__name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  transition: 0.3s;
+}
+.product__price {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  transition: 0.3s;
+}
+.product__btn {
+  position: absolute;
+  opacity: 0;
+  background: #ffffff;
+  color: #00a1eb;
+}
+.product:hover {
+  color: #ffffff;
+}
+.product:hover .product__btn {
+  position: initial;
+  opacity: 1;
+  transition: 0.3s;
+}
+.product:hover .product__price {
+  margin-bottom: 5px;
+}
+.map {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+.top-footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #f8f8f8;
+}
+.footer-navigation__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #666666;
+}
+.footer-navigation__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.footer-navigation__item {
+  margin-bottom: 15px;
+}
+.footer-navigation__item a {
+  color: #666666;
+  font-weight: 300;
+}
+.footer-bottom {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #4d4d4d;
+}
+.copyright {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #ffffff;
+}
 @media (min-width: 576px) {
   .container,
   .page-header__container,
-  .range__container {
+  .range__container,
+  .top-footer__container,
+  .footer-bottom__container {
     max-width: 540px;
   }
   .col-sm {
@@ -7525,7 +7653,8 @@ a:hover {
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
   }
-  .col-sm-3 {
+  .col-sm-3,
+  .footer-navigation {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
@@ -8274,7 +8403,9 @@ a:hover {
 @media (min-width: 768px) {
   .container,
   .page-header__container,
-  .range__container {
+  .range__container,
+  .top-footer__container,
+  .footer-bottom__container {
     max-width: 720px;
   }
   .col-md {
@@ -8894,7 +9025,9 @@ a:hover {
 @media (min-width: 992px) {
   .container,
   .page-header__container,
-  .range__container {
+  .range__container,
+  .top-footer__container,
+  .footer-bottom__container {
     max-width: 960px;
   }
   .col-lg {
@@ -9517,7 +9650,9 @@ a:hover {
 @media (min-width: 1200px) {
   .container,
   .page-header__container,
-  .range__container {
+  .range__container,
+  .top-footer__container,
+  .footer-bottom__container {
     max-width: 1140px;
   }
   .col-xl {

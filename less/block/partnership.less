@@ -1,3 +1,29 @@
 .partnership {
   .section-padding();
+
+  .col-md-4:hover {
+    .partnership__img {
+      background: @white;
+    }
+    .partnership__icon {
+      fill: @color-main;
+    }
+  }
+
+  &__img {
+    display: flex;
+    width: 168px;
+    height: 168px;
+    background: @color-main;
+    border-radius: 50%;
+    border: 2px solid @color-main;
+    margin: 0 auto 20px;
+    transition: @transition-time;
+  }
+
+  &__icon {
+    transition: @transition-time;
+    margin: auto;
+    fill: @white;
+  }
 }
