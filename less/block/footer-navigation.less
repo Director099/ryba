@@ -1,0 +1,26 @@
+.footer-navigation {
+  &:extend(.col-sm-3);
+
+  &__title {
+    text-transform: uppercase;
+    font-size: @font-size--h4;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: @gray-dark;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    a {
+      color: @gray-dark;
+      font-weight: 300;
+    }
+  }
+}
